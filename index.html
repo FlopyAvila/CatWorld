@@ -9,8 +9,19 @@
 </head>
 <body>
     <header>
-        <h1><a href="#"><span>Cat</span>World</a></h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#F4E7FF" d="m12 8l-1.33.09C9.81 7.07 7.4 4.5 5 4.5c0 0-1.97 2.96-.04 6.91c-.55.83-.89 1.26-.96 2.25l-1.93.29l.21.98l1.76-.26l.14.71l-1.57.94l.47.89l1.45-.89C5.68 18.76 8.59 20 12 20s6.32-1.24 7.47-3.68l1.45.89l.47-.89l-1.57-.94l.14-.71l1.76.26l.21-.98l-1.93-.29c-.07-.99-.41-1.42-.96-2.25C20.97 7.46 19 4.5 19 4.5c-2.4 0-4.81 2.57-5.67 3.59zm-3 3a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m-4 3h2l-.7 1.39c.2.64.76 1.11 1.45 1.11a1.5 1.5 0 0 0 1.5-1.5h.5a2 2 0 0 1-2 2c-.75 0-1.4-.41-1.75-1c-.35.59-1 1-1.75 1a2 2 0 0 1-2-2h.5a1.5 1.5 0 0 0 1.5 1.5c.69 0 1.25-.47 1.45-1.11z"/></svg>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href="#"><span>Cat</span>World</a></h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#F4E7FF" d="m12 8l-1.33.09C9.81 7.07 7.4 4.5 5 4.5c0 0-1.97 2.96-.04 6.91c-.55.83-.89 1.26-.96 2.25l-1.93.29l.21.98l1.76-.26l.14.71l-1.57.94l.47.89l1.45-.89C5.68 18.76 8.59 20 12 20s6.32-1.24 7.47-3.68l1.45.89l.47-.89l-1.57-.94l.14-.71l1.76.26l.21-.98l-1.93-.29c-.07-.99-.41-1.42-.96-2.25C20.97 7.46 19 4.5 19 4.5c-2.4 0-4.81 2.57-5.67 3.59zm-3 3a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m-4 3h2l-.7 1.39c.2.64.76 1.11 1.45 1.11a1.5 1.5 0 0 0 1.5-1.5h.5a2 2 0 0 1-2 2c-.75 0-1.4-.41-1.75-1c-.35.59-1 1-1.75 1a2 2 0 0 1-2-2h.5a1.5 1.5 0 0 0 1.5 1.5c.69 0 1.25-.47 1.45-1.11z"/></svg>
+            </div>
+            <div class="ul-links">
+                <ul>
+                    <li><a href="#razas">Razas</a></li>
+                    <li><button id="btn-abrir">Contacto</button></li>
+                </ul>
+            </div>
+            
+        </nav>
     </header>
     <main>
         <div class="container">
@@ -29,17 +40,36 @@
                         <img src="img/cat4.jpg" alt="Gato estirado durmiendo">
                     </div>
                 </div>
+
+                <aside class="formulario derecha" id="formulario">
+                    <button id="btn-cerrar">X</button>
+                    <div class="form-contenido">
+                        <h3>¡Contactanos!</h3>
+                        <form action="">
+                            <label for="name">Nombre:</label>
+                            <input type="text" name="name"  placeholder="Nombre" required>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <label for="textarea">Comentarios:</label>
+                            <textarea name="textarea" placeholder="..."></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <button id="btn-mover">Mover</button>
+                </aside>
+
                 <div class="inicio-contenido" id="gatoDato">
                     <h2>¿Sabias que...?</h2>
                     <p>Los gatos pasan aproximadamente 70% de sus vidas durmiendo.</p>
                     <button id="nuevoDato">Nuevo Dato Curioso</button>
                 </div>
             </div>
+            <p id="contador"></p>
             <section class="info">
                 <h3>¿Por qué los gatos son tan especiales?</h3>
                 <p>Los gatos han sido compañeros de los humanos durante miles de años. Son independientes, curiosos, juguetones y llenos de personalidad. Cada gato es único y tiene sus propios hábitos y preferencias.</p>
             </section>
-            <div class="gatos-container">
+            <div class="gatos-container" id="razas">
                 <h3>¿Qué gato tienes?</h3>
                 <div class="gato-galeria">
                     <div class="gato-card">

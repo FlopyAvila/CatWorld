@@ -13,11 +13,12 @@ body {
     color: #333;
 }
 
-a{
+a, ul{
     text-decoration: none;
+    list-style-type:none;
 }
 
-header{
+.navbar{
     background-color: #5e3996;
     position: fixed;
     top: 0;
@@ -27,28 +28,47 @@ header{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-family: "Coiny", serif;
     text-align: center;
     z-index: 1000; 
 }
 
-header h1{
+.logo h1{
     display: inline;
 }
 
-header a{
-    color: white;
-}
-
-header span{
+.logo span{
     color: #F4E7FF;
 }
 
-header svg{
+.logo svg{
     width: 35px;
     height: auto;
     transform: translateY(-10%);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a{
+    color: white;
+}
+
+.ul-links button{
+    border: none;
+    background-color: transparent;
+    font-family: "Coiny", serif;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ul-links li{
+    display: inline;
+    margin-right: 25px;
 }
 
 .inicio{
@@ -140,6 +160,81 @@ header svg{
     background-color: #562b96;
     transform: scale(1.03);
 }
+
+
+.formulario{
+    top: 0;
+    right: -30%;
+    position: fixed;
+    background-color: #562b96;
+    height: 100vh;
+    width: 30%;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+
+#btn-cerrar, #btn-mover{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #F4E7FF;
+    margin: 10px;
+    font-weight: bold;
+    color: #562b96;
+    cursor: pointer;
+}
+
+.form-contenido{
+    background-color: #F4E7FF;
+    width: 80%;
+    height: 70vh;
+    border-radius: 20px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px -2px rgb(255, 255, 255);
+}
+
+.form-contenido form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.form-contenido button{
+    padding: 10px;
+    border: none;
+    background-color: #562b96;
+    color: #F4E7FF;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.form-contenido input, textarea{
+    padding: 5px;
+    border: solid 1.5px #562b96;
+    border-radius: 5px;
+}
+
+.form-contenido h3{
+    text-align: center;
+    margin:  20px 0;
+    font-size: 25px;
+}
+
+
+
+
 
 .info{
     display: flex;

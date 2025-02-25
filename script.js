@@ -53,4 +53,59 @@ const curiosidadRandom = () =>{
     }, 200);
 }
 
-document.getElementById("nuevoDato").addEventListener("click", curiosidadRandom);
+const tiempoCambio = 10000;
+let tiempoRestante = 9;
+const contador = document.getElementById("contador");
+
+const actualizarContador = () =>{
+    contador.textContent = `Próximo cambio en: ${tiempoRestante}s`;
+    tiempoRestante--;
+
+    if (tiempoRestante<0){
+        tiempoRestante = tiempoCambio /1000;
+    }
+};
+setInterval(curiosidadRandom, tiempoCambio);
+setInterval(actualizarContador, 1000);
+
+console.log(contador)
+
+
+const nuevoDato= document.getElementById("nuevoDato");
+nuevoDato.addEventListener("click", curiosidadRandom);
+
+nuevoDato.addEventListener("mouseover", () =>{
+    nuevoDato.style.border=('solid 1.5px rgb(255, 255, 255)');
+})
+
+nuevoDato.addEventListener("mouseout", () => {
+    nuevoDato.style.border = "";
+});
+
+const btnAbrir = document.getElementById('btn-abrir');
+const btnCerrar= document.getElementById('btn-cerrar');
+const btnMover= document.getElementById('btn-mover');
+const formulario = document.getElementById('formulario');
+
+btnAbrir.addEventListener("click", () =>{
+    formulario.style.right = "0";
+    formulario.style.opacity = "1";
+    formulario.style.visibility = "visible";
+});
+
+btnCerrar.addEventListener("click", () =>{
+    formulario.style.right = "-30%";
+    formulario.style.opacity = "0";
+    formulario.style.visibility = "hidden";
+});
+
+btnMover.addEventListener("click", () => {
+    if (formulario.style.left === "0px") {
+        formulario.style.left = "auto";
+        formulario.style.right = "0";
+    } else {
+        formulario.style.left = "0";
+        formulario.style.right = "auto";
+    }
+});
+
