@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Coiny&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Baloo 2", serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: #5e3996;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Coiny", serif;
+    text-align: center;
+    z-index: 1000; 
+}
+
+header h1{
+    display: inline;
+}
+
+header a{
+    color: white;
+}
+
+header span{
+    color: #F4E7FF;
+}
+
+header svg{
+    width: 35px;
+    height: auto;
+    transform: translateY(-10%);
+}
+
+.inicio{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.inicio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center ;
+    display: block;
+}
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+
+.inicio-contenido{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    z-index: 2; 
+    text-align: center;
+    font-family: "Coiny", serif;
+    font-weight: 100;
+    width: 50%;
+}
+
+.inicio-contenido h2{
+    color: #F4E7FF;
+}
+.inicio-contenido p{
+    margin: 70px 0;
+    font-size: 30px;
+    min-height: 40px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.inicio-contenido button{
+    font-family: "Coiny", serif;
+    font-size: 25px;
+    color: #F4E7FF;
+    background-color: #5e3996;
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.inicio-contenido button:hover{
+    transform: translateY(-5px);
+    background-color: #562b96;
+    transform: scale(1.03);
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin:0 auto;
+    width: 80%;
+}
+
+.info h3, .gatos-container h3{
+    font-size: 30px;
+    margin:25px 0;
+    text-align: center;
+}
+
+.info p{
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.gatos-container{
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    background-color: #F4E7FF;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px -4px rgba(94,57,150,1);
+    padding: 20px
+}
+
+.gato-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gato-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+
+.gato-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gato-card-content {
+    padding: 1.5rem;
+}
+
+.gato-card-content h4{
+    font-size: 20px;
+}
+
+
+
+
+footer{
+    background-color: #5e3996;
+    width: 100%;
+    height: 70px;
+    margin-top: 60px;
+    color: #F4E7FF;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 18px;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px){
+    .inicio-contenido{
+        width: 80%;
+    }
+    .inicio-contenido p {
+        margin: 50px 0;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px){
+    .inicio-contenido{
+        width: 90%;
+    }
+    .inicio-contenido p {
+        margin: 40px 0;
+        font-size: 24px;
+    }
+
+    .inicio-contenido button{
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .inicio-contenido h2 {
+        font-size: 34px;
+    }
+}
+
