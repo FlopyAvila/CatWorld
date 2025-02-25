@@ -24,6 +24,22 @@ const gatoDato = [
     "Un gato casero vive en promedio 15 años."
 ];
 
+
+
+let slideActual = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+
+const cambiarSlide = () => {
+    slides[slideActual].classList.remove('activo');
+    slideActual= (slideActual + 1) % totalSlides;
+    slides[slideActual].classList.add('activo');
+}
+
+setInterval(cambiarSlide, 5000);
+
+
+
 const curiosidadRandom = () =>{
     const dato = document.getElementById("gatoDato");
     const randomNum = Math.floor(Math.random()* gatoDato.length);
